@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Hamilton Beaches</title>
+
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="beaches.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="beaches.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script type="text/javascript"
+        src="https://www.bing.com/api/maps/mapcontrol?key=Ag-9UmaOu3hCq2d2bxFTnt2ryCnUmD81o8_dEMuHCqbAFJ0TMwiY1IuhzPUjRaC6&callback=loadMapScenario"
+        async defer></script>
+
+
+</head>
+
+
+
+<body>
+    <div class="container-fluid" id="container">
+        <h1>Hamilton Beaches</h1>
+        <button type="button" id="toggleButton" class='btn btn-info' hidden="false">Toggle View</button>
+        <div class="row" id="userDisplays" class="col">
+            <div id="beachMap" class="col-5"></div>
+
+            <div id="beachDiv" class="col-2">
+
+                <h6>Beaches over threshold</h6>
+                <ul id="beachList" class="list-group">
+
+
+                </ul>
+
+
+
+
+                <h6>Blacklisted Beaches</h6>
+                <ul id="blacklist" class="list-group">
+
+                </ul>
+
+
+            </div>
+            <div id="graphDiv" class="col-5">
+                <h5 id="graphTitle">Please click a pushpin to see its history</h5>
+                <canvas id="beachGraph" class="col"></canvas>
+            </div>
+        </div>
+
+
+        <div id="userControls" class="row">
+            <form>
+                <input type="number" id="thresholdInput" placeholder="Please enter threshold">
+                <button type="button" id="filterButton" class='btn btn-primary'>Filter Beaches</button>
+                
+            </form>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
